@@ -1,0 +1,25 @@
+<p>test01 works!</p>
+<br>
+<input type="text" [(ngModel)]="userName">
+
+<button (click)="updateName()">outputName</button>
+<p>name:{{userName}}</p>
+<p *ngIf='userName == "111"'>我的名字叫111</p>
+
+<button (click)="springBoot()">springBoot</button>
+
+<table [ngClass]="{'first': userName == '111', 'second': false, 'third': true}">
+    <tr *ngFor="let item of list;let isEven = even;">
+        <td [style.font-size]="isEven ? 'x-large' : 'smaller'">{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td [ngStyle]="{'background-color':isEven ? 'green' : 'red' }">{{item.age}}</td>
+    </tr>
+</table>
+
+<div>{{date|date:"yyyy-MM-dd HH:mm"}}</div>
+<div>{{list|json}}</div>
+<div>{{userName|strFormat:6}}</div>
+
+<div style="width:100px;height:100px;border:1px solid red" id="btn1">按钮一</div>
+
+<div style="width:100px;height:100px;" #div2>按钮二</div>

@@ -1,0 +1,16 @@
+<div style="border:5px solid black;padding: 5px;">
+    <p>我是app.component.html(主模块)</p>
+    <button (click)="login()">login</button>
+    <button (click)="logout()">logout</button>
+    <a [routerLink]="['/test01']" [queryParams]="{name:'33'}">test01</a>
+    <button routerLink="/customers">Customers</button>
+    <button routerLink="/orders">Orders</button>
+    <button routerLink="/customers/user">user</button>
+    <button routerLink="/customers/father">father</button>
+    <button routerLink="">Home</button><br>
+    <div style="border:5px solid black;padding: 5px;margin:5px">
+        <p>我是路由器状态动态填充的</p>
+        <!-- 根据当前的路由器状态动态填充它 -->
+        <router-outlet></router-outlet>
+    </div>
+</div>
